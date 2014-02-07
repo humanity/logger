@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public final class LoggerProvider {
 
-    private static HashMap<Class, Logger> loggers;
+    private static HashMap<Class, Logger> loggers = new HashMap<>();
 
     public static Logger getLogger(Class clazz) {
         return loggers.get(clazz);
