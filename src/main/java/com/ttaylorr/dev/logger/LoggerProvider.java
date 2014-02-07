@@ -11,6 +11,10 @@ public final class LoggerProvider {
     }
 
     public static Logger putLogger(Class clazz) {
+        if (loggers.containsKey(clazz)) {
+            return null;
+        }
+
         Logger logger = new SimpleLogger(System.out);
         loggers.put(clazz, logger);
         return logger;
