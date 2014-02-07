@@ -10,8 +10,10 @@ public final class LoggerProvider {
         return loggers.get(clazz);
     }
 
-    public static void putLogger(Class clazz) {
-        loggers.put(clazz, new SimpleLogger(System.out));
+    public static Logger putLogger(Class clazz) {
+        Logger logger = new SimpleLogger(System.out);
+        loggers.put(clazz, logger);
+        return logger;
     }
 
 }
