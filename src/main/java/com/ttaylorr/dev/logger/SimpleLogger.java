@@ -1,14 +1,12 @@
 package com.ttaylorr.dev.logger;
 
-import com.sun.javafx.beans.annotations.NonNull;
-
 import java.io.PrintStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class SimpleLogger implements Logger {
 
-    private final @NonNull PrintStream out;
+    private final PrintStream out;
     private final SimpleDateFormat dateFormat;
 
     public SimpleLogger(PrintStream stream) {
