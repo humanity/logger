@@ -65,7 +65,7 @@ public class SimpleLogger implements Logger {
 
         int argCount = -1;
 
-        Pattern pattern = Pattern.compile(Pattern.quote("{}"));
+        Pattern pattern = Pattern.compile("\\{\\}");
         Matcher matcher = pattern.matcher(str);
 
         while (matcher.find()) {
