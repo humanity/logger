@@ -3,6 +3,8 @@ package com.ttaylorr.dev.logger;
 import java.io.PrintStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SimpleLogger implements Logger {
 
@@ -63,14 +65,14 @@ public class SimpleLogger implements Logger {
 
         int argCount = 0;
 
-        for(String s : str.split("\\s")) {
-            if (s.equals("{}")) {
-                builder.append(args[++argCount]);
-            } else {
-                builder.append(s);
-            }
+        Pattern pattern = Pattern.compile(Pattern.quote("{}"));
+        Matcher matcher = pattern.matcher(str);
+
+        while (matcher.find()) {
+            str.replaceFirst(matcher.group(), args[++argCount].toString());
         }
 
+        builder.append(str);
         this.out.println(builder.toString());
     }
 
