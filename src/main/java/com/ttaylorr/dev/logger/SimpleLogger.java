@@ -63,7 +63,7 @@ public class SimpleLogger implements Logger {
         builder.append(formatDate()).append(' ');
         builder.append('[').append(level.name()).append(']').append(' ');
 
-        int argCount = 0;
+        int argCount = -1;
 
         Pattern pattern = Pattern.compile(Pattern.quote("{}"));
         Matcher matcher = pattern.matcher(str);
