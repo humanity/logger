@@ -63,7 +63,7 @@ public class SimpleLogger implements Logger {
 
         int argCount = 0;
 
-        for(String s : str.split("\\w")) {
+        for(String s : str.split("\\s")) {
             if (s.equals("{}")) {
                 builder.append(args[++argCount]);
             } else {
