@@ -3,8 +3,6 @@ package com.ttaylorr.dev.logger;
 import java.io.PrintStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class SimpleLogger implements Logger {
 
