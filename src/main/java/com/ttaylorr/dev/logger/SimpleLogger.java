@@ -63,8 +63,10 @@ public class SimpleLogger implements Logger {
         builder.append(formatDate()).append(' ');
         builder.append('[').append(level.name()).append(']').append(' ');
 
-        for (Object o : args) {
-            str = str.replaceFirst("\\{\\}", o.toString());
+        if (args != null) {
+            for (Object o : args) {
+                str = str.replaceFirst("\\{\\}", o.toString());
+            }
         }
 
         builder.append(str);
