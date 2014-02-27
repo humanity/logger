@@ -26,4 +26,14 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>ttaylorr-repo</id>
+            <url>http://ttaylorr.com:8081/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>ttaylorr-repo</id>
+            <url>http://ttaylorr.com:8081/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
