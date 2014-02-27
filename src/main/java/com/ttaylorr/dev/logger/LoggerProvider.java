@@ -12,7 +12,7 @@ public final class LoggerProvider {
 
     public static Logger putLogger(Class clazz) {
         if (loggers.containsKey(clazz)) {
-            return null;
+            return loggers.get(clazz);
         }
 
         Logger logger = new SimpleLogger(System.out);
