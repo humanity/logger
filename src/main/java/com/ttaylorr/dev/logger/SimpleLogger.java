@@ -62,12 +62,9 @@ public class SimpleLogger implements Logger {
         builder.append('[').append(level.name()).append(']').append(' ');
 
         if (args != null) {
-            for (Object o : args) {
-                str = str.replaceFirst("\\{\\}", o.toString());
-            }
+            builder.append(String.format(str, args));
         }
 
-        builder.append(str);
         this.out.println(builder.toString());
     }
 
