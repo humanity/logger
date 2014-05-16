@@ -19,4 +19,6 @@ public interface Logger {
     public void severe(String str);
 
     public void log(LogLevel level, String str, Object... args);
+
+    public boolean canLog(LogLevel level);
 }
